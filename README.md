@@ -1,3 +1,36 @@
+# feedreader
+Feedreader 04/17/2016
+
+General information:
+-------------------------
+
+
+# Project Overview
+This application demonstrates Test Driven Development TDD using Jasmine.
+
+```To run the application, open the index.html file in your browser.```
+
+Once the page loads, you will see at the bottom of the page a list of the tests that were performed and the results that were achieved.
+
+At the bottom of this document I have included the original project README file contents. This should provide the details of the testing and expected results.
+
+Each test was designed to test for an expected behavior, for example one tests to ensure that each feed for the feedreader actually exists and that it is populated with a value. When the page loads the test is run and if the test (also known as a spec or specification) passes the test will display as green. If the test fails, it will display as red with some explanation of the failure.
+
+If all tests pass, you should see n specs, 0 failures highlighted in green with a list of the tests displayed below it.
+
+
+
+------------------------
+Contact information:
+
+Paul Davis
+paulandcindy@gmail.com
+
+Copyright 2015-2016 Paul Davis
+------------------------
+
+# Original README for this project is below:
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
