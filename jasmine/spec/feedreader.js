@@ -79,15 +79,17 @@ $(function() {
 
     it('should toggle display / hidden when menu icon is clicked', function(){
       // make sure that each click toggles the presence of body menu-hidden class
-      var classState = $('body').hasClass('menu-hidden');
-
-      $('.menu-icon-link').trigger('click');
-      expect($('body').hasClass('menu-hidden')).not.toBe(classState);
-      $('.menu-icon-link').trigger('click');
-      expect($('body').hasClass('menu-hidden')).toBe(classState);
+      if($('body').hasClass('menu-hidden')){
+        $('.menu-icon-link').trigger('click');
+        expect($('body').hasClass('menu-hidden')).toBeFalsy();
+      }else {
+        if(!$('body').hasClass('menu-hidden')){
+          $('.menu-icon-link').trigger('click');
+          expect($('body').hasClass('menu-hidden')).toBeTruthy();
+        }
+      }
     });
   });
-
   // run the loadFeed function with the first 0th feed
   // use Jasmine done to cause app to wait on the the asynchronous request completion
 
@@ -110,8 +112,8 @@ $(function() {
 
   describe('New Feed Selection', function(){
     // declare these variables outside the beforeEach and it functions to allow all it functions to have access to them
-    var firstHeaderTitle,
-        firstArticleTitle;
+    var firstHeaderTitle;
+    var firstArticleTitle;
 
     beforeEach(function(done){
       loadFeed(0, function(){
